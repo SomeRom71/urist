@@ -1,0 +1,55 @@
+section.s-services#service
+  .container
+    nav.menu
+      ul
+      - var items = { '#service' : 'Наши услуги', '#more' : 'Дополнительные услуги', '#dispute' : 'Юридический аутсорсинг', '#faq' : 'Ответы на вопросы', '#consult' : 'Бесплатная консультация', '#contacts' : 'Контакты' }
+      - each val, key in items
+        li.menu__item
+          a(href="#{key}") #{val} 
+    .service-wrap
+      .service-info
+        .service-info__text
+          h1.service-info__h1 Юридические услуги
+          br
+          |организациям и предпринимателям 
+          br
+          |в Хабаровске
+        .service-info__list
+          ul
+            - var list = ['Представительство в арбитражных судах', 'Юридическое сопровождение вашего бизнеса', 'Взыскание долгов, разрешение споров']
+            - each item in list
+              li.service-info__list-item #{item}
+        .service-info__block
+          span У нас разработана
+          | УНИКАЛЬНАЯ МЕТОДИКА ПОЛУЧЕНИЯ ДОКАЗАТЕЛЬСТВ,
+          span.mid основанная на опыте полученном нашими сотрудниками 
+          span.md за годы работы в 
+            span.underline судебной системе 
+            |  и 
+            span.underline органах государственной безопасности
+          .service-info__block-btn.block-btn
+            a(href="#trouble-form").block-btn__link.blick.popup-with-form Решите мои проблемы
+      //.femida
+        .femida__pulse
+          span.femida__pulse__text Верное решение
+          img.femida__pulse__img(src="images/femida.png", alt="Фемида")
+  form#trouble-form.white-popup-block.mfp-hide.ajax
+    .trouble-wrap
+      .form-title Заполните форму ниже,
+        span.sm и мы свяжемся с Вами для обсуждения всех целей и задач
+      label.stability__label.form__label
+        +svgsprite("man-user")
+        input.stability__input.form__input(type="text" placeholder="Как к вам обращаться?" name="name" required="required")
+      label.stability__label.form__label
+        +svgsprite("call")
+        input.stability__input.mask.form__input(type="tel" placeholder="Введите Ваш телефон" required="required" name="phone")
+      label.stability__label.form__label
+        +svgsprite("mail")
+        input.stability__input.form__input(type="email" placeholder="Введите Ваш e-mail" name="mail" required="required") 
+      .service-info__block-btn.block-btn
+        button(href="#").block-btn__link Решите мои проблемы!
+      span.agree
+        img(src="/images/check.png", alt="Галочка")
+        |Согласен(а) на обработку данных
+      svg.svgsprite.-close.mfp-close
+        use.mfp-close(xlink:href="./assets/img/sprites/svgsprites.svg#close")

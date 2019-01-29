@@ -1,0 +1,44 @@
+mixin header(options)
+  - options = options ? options : {};
+
+header.header
+  .header__container.container
+    .header__logo
+      a(href="#")
+        img(src="../images/logo.png", alt="Логотип")
+    nav.menu
+      ul
+      - var items = { '#service' : 'Наши услуги', '#more' : 'Дополнительные услуги', '#dispute' : 'Юридический аутсорсинг', '#faq' : 'Ответы на вопросы', '#consult' : 'Бесплатная консультация', '#contacts' : 'Контакты' }
+      - each val, key in items
+        li.menu__item
+          a(href="#{key}") #{val} 
+    nav.header__mobile-menu.mobile-menu
+      span.mobile-menu__btn
+        +svgsprite("menu")
+      ul.mobile-menu__list
+        - var items = { '#service' : 'Наши услуги', '#more' : 'Дополнительные услуги', '#dispute' : 'Юридический аутсорсинг', '#faq' : 'Ответы на вопросы', '#consult' : 'Бесплатная консультация', '#contacts' : 'Контакты' }
+        - each val, key in items
+          li.menu__item
+            a(href="#{key}") #{val} 
+        .header__contact__btn.contact-btn.mobile-menu__contact
+          a.popup-with-form(href="#callback-form") Заказать обратный звонок
+    .header__contact
+      .header__contact__mobile.mobile
+        .icons
+          +svgsprite('smart2')
+          +svgsprite('smart2')
+        a(href="tel:89244030798") 8 (924) 403 07 98
+      .header__contact__btn.contact-btn
+        a.popup-with-form(href="#callback-form") Заказать обратный звонок
+    form#callback-form.white-popup-block.mfp-hide.ajax(method="post")
+      .form-title Оставьте свой номер ниже 
+        span.sm и мы перезвоним Вам в течении 7 минут
+      label.consult-form__label.form__label
+        +svgsprite("call")
+        input.consult-form__input.mask.form__input(type="tel" placeholder="Введите Ваш телефон" name="phone" required)
+      button.block-btn__link.form__btn.blick Перезвоните мне!
+      span.agree
+        img(src="/images/check.png", alt="Галочка")
+        |Согласен(а) на обработку данных
+      svg.svgsprite.-close.mfp-close
+        use.mfp-close(xlink:href="./assets/img/sprites/svgsprites.svg#close")

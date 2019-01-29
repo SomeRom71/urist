@@ -1,0 +1,277 @@
+.escort{
+	&__container{
+		text-align: center;
+		margin-top: 110px;
+		color: #FFF;
+	}
+	&__title{
+		width: 750px;
+		color: #FFF;
+		margin: 0 auto;
+		.line::before{
+			background-color: @text;
+			top: 22px;
+		}
+	}
+	&__company{
+		font-size: 20px;
+		color: #FFF;
+		margin: 25px 0 55px;
+		display: block;
+		letter-spacing: 0.05em;
+	}
+	&__info{
+		font-size: 44px;
+		font-weight: 900;
+		width: 505px;
+		text-transform: uppercase;
+		margin: 0 auto;
+		position: relative;
+		margin-bottom: 35px;
+		letter-spacing: 0.05em;
+		img{
+			position: absolute;
+			right: 20px;
+			top: -10px;
+			&:first-child{
+				left: 20px;
+				right: auto;
+			}
+		}
+		span{
+			color: #61fd9f;
+		}
+	}
+	&__text{
+		margin-bottom: 25px;
+		span{
+			color: #5ef09a;
+		}
+	}
+	&__row{
+		margin-top: 85px;
+	}
+	&__item{
+		text-align: center;
+		border: 1px dotted rgba(255, 255, 255, 0.5);
+		&__numb{
+			font-size: 69px;
+			font-weight: 900;
+			display: block;
+			height: 70px;
+			width: 70px;
+			border-radius: 50%;
+			background-color: #3c3cf0;
+			margin: 5px;
+			overflow: hidden;
+			position: relative;
+			b{
+				position: absolute;
+				top: -6px;
+				left: -16px;
+			}
+		}
+		&_wrap{
+			background-color: rgba(60, 60, 240, 0.5);
+			border-radius: 50%;
+			height: 80px;
+			width: 80px;
+			display: inline-block;
+			margin-top: -45px;
+			animation: scale 1.8s ease infinite;
+		}
+		&:nth-child(2){
+			.escort__item_wrap{
+				animation-delay: 0.6s;
+			}	
+		}
+		&:nth-child(3){
+			.escort__item_wrap{
+				animation-delay: 1.2s;
+			}	
+		}
+		&__text{
+			width: 290px;
+			padding: 25px 40px 30px;
+			span{
+				color: #5ef09a;
+			}
+		}
+	}
+}
+
+.stability{
+	display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 20px;
+	box-shadow: 0px 12px 40px 0px rgba(60, 60, 240, 0.35);
+	width: 970px;
+	margin: 0 auto;
+	margin-top: 50px;
+    &__title{
+    	margin-top: 45px;
+    	&.title{
+    		font-size: 30px;
+			color: #21334d;
+			line-height: 1.4;
+			font-weight: 900;
+			text-transform: unset;
+			.line::before{
+				top: 6px;
+				background-color: #61FD9F;
+			}
+    	}
+    	b{
+    		color: @text;
+    	}
+    }
+    &__wrap{
+    	margin-top: 30px;
+    	display: flex;
+    	justify-content: space-evenly;
+    }
+	&__btn{
+		margin-top: 25px;
+		cursor: pointer;
+		font-size: 18px;
+		padding: 19px 15px;
+		animation: scale 2s linear infinite;
+		&:hover{
+		    animation-play-state: paused;
+		}
+    }
+    &__label{
+    	padding: 15px 26px;
+    	svg{
+    		fill: #61fd9f;
+    		margin-right: 10px;
+    	}
+    }
+    &__input{
+    	font-family: Gilroy;
+    	text-align: left;
+    }
+    &__agree{
+    	margin-bottom: 30px;
+    }
+    &__dots{
+    	margin: 100px 0 25px;
+    	span{
+			&:nth-child(3n+1){
+				background-color: #2b6458;
+			}
+			&:nth-child(3n+2){
+				background-color: #3a906d;
+			}
+			&:nth-child(3n+3){
+				background-color: #61fd9f;
+			}
+    	}
+    }
+}
+
+@media (max-width: 1200px){
+	.escort{
+		&__row{
+		    flex-direction: column;
+		    align-items: center;
+		}
+		&__item{
+			margin-bottom: 60px;
+		}
+	}
+}
+ 
+@media (max-width: 979px){
+	.stability{
+		width: 100%;
+		margin: 0 auto;
+		&__title{
+			font-size: 23px!important;
+		}
+		&__wrap{
+			flex-direction: column;
+			align-items: center;
+		}
+		&__label{
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+ 
+@media (max-width: 767px){
+	.escort{
+		&__title{
+			font-size: 30px;
+			width: auto;
+			.line::before{
+				content: none;
+			}
+		}
+		&__company{
+			font-size: 16px;
+		}
+		&__info{
+			font-size: 38px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+	}
+}
+ 
+@media (max-width: 600px){
+	.escort{
+		&__title{
+			font-size: 25px;
+		}
+		&__info{
+			width: 390px;
+			font-size: 30px;
+		}
+	}
+	.stability{
+		&__title{
+			.line{
+				display: unset;
+				&::before{
+					content: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.escort{
+		&__title{
+			font-size: 20px;
+			.line::before{
+				top: 10px;
+			}
+		}
+		&__info{
+			width: 320px;
+			font-size: 25px;
+		}
+		&__item{
+			width: auto;	
+			margin: 0 20px 60px;
+			&__text{
+				font-size: 14px;
+				padding: 10px 18px 30px;
+				width: auto;
+			}	
+		}
+	}
+	.stability{
+		&__btn{
+			font-size: 16px;
+			padding: 16px 10px;
+		}
+	}
+}

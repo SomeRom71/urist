@@ -1,0 +1,44 @@
+section.s-consult#consult
+  .container.consult__container
+    .consult__heading.heading Не знаете как быть?
+    .title.consult__title Запишитесь на 
+      span.line бесплатную консультацию
+      br   
+      |  с нашим 
+      span.underline  ведущим юристом
+    .row.consult__row
+      .gendir
+        img.gendir__img(src="images/gendir.jpg", alt="Генеральный директор")
+        .gendir__about
+          h5.gendir__name Евгений Владимирович
+          span.gendir__post Генеральный директор
+          ul.gendir__list
+            - var gendir = ['Более 10 лет опыта за плечами', '245 выигранных дел', '96% дел с положительным результатом']
+            - each item in gendir
+              li.gendir__list-item #{item}   
+      .gendir-text
+        p.gendir-text-item «Основным нашим приоритетом является экономия времени владельцев бизнеса. 
+          b Самостоятельный поиск ответов на возникающие вопросы может занять у Вас месяцы.
+          br
+          | И при этом Вы все равно не поймете всех нюансов самостоятельно
+        p.gendir-text-item 
+          b Я же дам Вам 
+            span.text  четкие ответы, рекомендации и советы, подходящие именно в вашей ситуации, 
+            |  всего за один телефонный разговор 
+        p.gendir-text-item За время нашего разговора 
+          span.text Вы получите полностью сформированную, а самое главное, на 100% верную стратегию
+          |  решения индивидуально Вашей ситуации  
+        p.gendir-text-item Просто оставьте Ваш номер в форме ниже, и я перезвоню Вам для оказания бесплатной консультации»
+        .gendir-text__consult
+          .gendir-text__consult-wrap
+            span.gendir-text__consult-title Консультаций доступно на сегодня: 
+              b.gendir-text__consult-num 2
+            form.consult-form.ajax(data-form-name="Консультаций доступно на сегодня")
+              label.consult-form__label.form__label
+                +svgsprite("call")
+                input.consult-form__input.mask.form__input(type="tel" placeholder="Введите Ваш телефон" required="required" name="phone")
+              button.block-btn__link.form__btn.blick.consult-form__btn Записаться на консультацию
+              a(href="#thanks2" style="display: none;").popup-with-form
+            span.agree
+              img(src="/images/check.png", alt="Галочка")
+              |Согласен(а) на обработку данных

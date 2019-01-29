@@ -1,0 +1,22 @@
+doctype html
+html(lang='ru')
+    head
+        include head.jade
+    body
+        include /_includes/mixins/svgsprite
+
+        include /_includes/header
+
+        block content
+        include /_includes/service
+        include /_includes/result
+        include /_includes/dispute
+        include /_includes/more
+        include /_includes/escort
+        include /_includes/faq
+        include /_includes/consult
+        include /_includes/place
+
+        include /_includes/footer
+
+        include scripts.jade

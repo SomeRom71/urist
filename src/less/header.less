@@ -1,0 +1,169 @@
+	.header{
+	position: relative;
+	background-color: #FFF;
+	z-index: 20;
+	&__container{
+		display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 13px!important;
+	    margin-bottom: 13px!important;
+	}
+	&__contact{
+		margin-top: 5px;
+		text-align: center;
+		font-weight: 900;
+		position: relative;
+		&__btn{
+			position: absolute;
+			bottom: -31px;
+			right: 0;
+			z-index: 11;
+		}
+	}
+	.menu{
+		display: none;
+	    align-self: center;
+	    margin: 20px 0;
+	    a{
+	    	color: #999edd;
+	    }
+	}
+}
+
+.mobile-menu{
+	width: 175px;
+	margin: 0 auto;
+	text-align: center;
+	align-self: center;
+	display: none;
+	.menu{
+		&__item a::after, &__item a::before{
+			content: none;
+		}
+	}
+	&__list{
+		display: flex;
+	    flex-direction: column;
+	    position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		padding-right: 65px;
+		background-color: #FFF;
+		transform: translateY(23%) scale(1, 0);
+		transform-origin: top center;
+		transition: transform 0.28s ease-out;
+		z-index: 10;
+	}
+	&__btn{
+		cursor: pointer;
+		&::after{
+			color: #3C3CF0;
+			font-size: 18px;
+			content: 'Открыть меню';
+			padding-left: 5px;
+		}
+		svg{
+			fill: #3C3CF0;
+			vertical-align: text-top;
+		}
+	}
+	.menu__item{
+		margin: 0;
+		padding: 10px 0;
+		a{
+			color: #999EDD;
+		}
+	}
+	&.open{
+		.mobile-menu{
+			&__list{
+				transform: translateY(23%) scale(1, 1);
+			}
+			&__btn{
+				&::after{
+					content: 'Закрыть меню';
+				}
+			}
+		}
+	}
+}
+
+.mobile{
+	font-size: 22px;
+	letter-spacing: 0.05em;
+	font-weight: 900;
+}
+
+.contact-btn{
+	background: #61FD9F;
+	font-size: 14px;
+	border-radius: 16px;
+	box-shadow: 0px 29px 27px 0px rgba(35, 35, 184, 0.68);
+	border: 1px solid rgb(97, 253, 220);
+	font-weight: 900;
+	transition: background 1s ease;
+	&:hover{
+		background: #FFF;
+	}
+	a{
+		display: block;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 1200px){
+	.mobile-menu{
+		display: block;
+		&__contact{
+			position: static;
+			display: inline-block!important;
+			margin: 10px auto;
+		}
+	}
+	.header{
+		.menu{
+			display: none!important;
+		}
+	}
+	.menu{
+		display: none;
+	}
+	.header__contact__btn{
+		display: none;
+	}
+}
+ 
+@media (max-width: 767px){
+	.header{
+		&__logo{
+			display: none!important;
+		}
+		&__contact{
+			&__btn{
+				display: none;
+			}
+		}
+	}
+	.mobile-menu{
+		margin: 0;
+		&__list{
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.header{
+		&__container{
+		    flex-direction: column-reverse;
+		}
+	}
+	.mobile-menu{
+		margin-top: 10px;
+		&__list{
+			margin-top: 25px;
+		}
+	}
+}

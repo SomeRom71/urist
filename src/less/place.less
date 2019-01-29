@@ -1,0 +1,145 @@
+.contacts{
+	position: absolute;
+	z-index: 10;
+	background-color: #fff;
+	box-shadow: 0px 0px 54px 0px rgba(0, 42, 102, 0.24);
+	border-radius: 10px;
+	width: 400px;
+	letter-spacing: 0.05em;
+	&__container{
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	&__title{
+		text-align: center;
+		margin: 38px 0 45px;
+		font-size: 36px;
+		.line{
+			&::before{
+				background-color: #61FD9F;
+			}
+		}
+	}
+	&__btn{
+		font-size: 16px;
+		padding: 13px 36px;
+		margin-top: 15px;
+		letter-spacing: 0;
+		box-shadow: 0 9px 19.8px 0.2px rgba(0,83,255,.40) !important;
+	}
+	&__item{
+		color: #003252;
+		font-size: 18px;
+		display: flex;
+		margin-bottom: 40px;
+		margin-left: 65px;
+		position: relative;
+		svg{
+			fill: @text;
+			margin-right: 20px;
+			font-size: 24px;
+		}
+		&-phone{
+			font-weight: 900;
+			font-size: 24px;
+			display: flex;
+			flex-direction: column;
+			a{
+				color: #003252;
+				&:first-child{
+					margin-bottom: 8px;
+				}
+			}
+		}
+		&-wrap{
+			&::before{
+				content: '';
+				display: block;
+				height: 48px;
+				background: #61fd9f;
+				position: absolute;
+				z-index: -1;
+				left: -70px;
+				width: 82px;
+				top: -12px;
+			}
+		}
+	}
+}
+
+.s-place{
+	height: 500px;
+	position: relative;
+}
+
+.map{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+}
+
+@media (max-width: 1200px){
+}
+ 
+@media (max-width: 979px){
+	.contacts{
+		&__title{
+			font-size: 30px;
+		}
+		width: 50%;
+	    height: 100%;
+	    right: 0;
+	    border-radius: 0;
+	}
+	.map{
+		width: 50%;
+	}
+}
+
+ 
+@media (max-width: 767px){
+	.s-place{
+		height: auto;
+	}
+	.contacts, .map{
+		position: static;
+	}
+	.contacts{
+		width: 100%;
+		text-align: center;
+		&__container{
+			height: auto;
+			margin: 0;
+		}
+		&__item{
+			margin-left: 0;
+			justify-content: center;
+			&-wrap{
+				&::before{
+					content: none;
+				}
+			}
+		}
+	}
+	.map{
+		width: 100%;
+		height: 200px;
+	}
+}
+
+@media (max-width: 600px){
+
+}
+
+@media (max-width: 480px){
+	.contacts{
+		&__title{
+			font-size: 25px;
+		}
+	}
+}

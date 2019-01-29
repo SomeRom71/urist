@@ -1,0 +1,83 @@
+section.s-escort
+  .container.escort__container
+    h2.title.escort__title.upper Юридическое 
+      span.line сопровождение 
+      |  Вашей 
+      span.line организации
+    span.escort__company от компании "Верное решение"
+    .escort__info
+      img(src="images/angle_l.png", alt="Угол")
+      img(src="images/angle_r.png", alt="Угол")
+      | Платите юристу меньше 
+      span на 20-40%
+    p.escort__text 
+      span Юридический аутсорсинг 
+      |позволяет за небольшие деньги 
+      br 
+      |получить юридическое сопровождение деятельности организации
+    p.escort__text По сути, вы нанимаете себе в штат юридический отдел, который, кстати говоря, 
+      span не болеет и не ходит в отпуск,
+      br
+      span а также не расходует 
+      |Ваши внутренние ресурсы (рабочие места, оргтехнику и т. д.)
+    .title.escort__title.upper
+      span.line Что вы получаете, 
+      |  работая с нами:
+    .row.escort__row
+      .escort__item
+        .escort__item_wrap
+          span.escort__item__numb 
+            b 01
+        p.escort__item__text Услуги квалифицированных 
+          span юристов и адвокатов, имеющих опыт работы >10 лет 
+          |в интересующих Вас сферах права
+      .escort__item
+        .escort__item_wrap
+          span.escort__item__numb 
+            b 02
+        p.escort__item__text 
+          span Вам не нужно принимать на работу дополнительно 1–2 юристов,  
+          |заключать с ними трудовой договор, 
+          span нести риск и расходы 
+          |больничных, отпусков и тд
+      .escort__item
+        .escort__item_wrap
+          span.escort__item__numb 
+            b 03
+        p.escort__item__text Вам легко проконтролировать ход работы и оценить ее результат: 
+          span мы подготавливаем для Вас отчеты 
+          |о проделанной работе 
+          span еженедельно
+    form.stability.ajax(data-form-name="Заполните форму и почувствуйте, что стабильность Вашего бизнеса с нами - это просто")
+      .stability__title.title
+        b ЗАПОЛНИТЕ ФОРМУ НИЖЕ 
+        |И ПОЧУВСТВУЙТЕ,
+        br
+        |что 
+        span.line стабильность Вашего бизнеса с нами - это просто!
+      .stability__wrap
+        label.stability__label.form__label
+          +svgsprite("man-user")
+          input.stability__input.form__input(type="text" placeholder="Как к вам обращаться?" required="required" name="name")
+        label.stability__label.form__label
+          +svgsprite("call")
+          input.stability__input.mask.form__input(type="tel" placeholder="Введите Ваш телефон" required="required" name="phone")
+        label.stability__label.form__label
+          +svgsprite("mail")
+          input.stability__input.form__input(type="email" placeholder="Введите Ваш e-mail" required="required" name="mail") 
+      button(type="submit").block-btn__link.stability__btn.form__btn Почувствовать стабильность
+      a(href="#thanks" style="display: none;").popup-with-form
+      span.stability__agree.agree
+        img(src="/images/check.png", alt="Галочка")
+        |Согласен(а) на обработку данных
+    .stability__dots.dots
+        span
+        span
+        span
+    #thanks.white-popup-block.mfp-hide
+      .form-title Спасибо за доверие!
+      p Мы свяжемся с вами 
+        span._accent в ближайнее время 
+        | по указанному телефону
+      svg.svgsprite.-close.mfp-close
+        use.mfp-close(xlink:href="./assets/img/sprites/svgsprites.svg#close")

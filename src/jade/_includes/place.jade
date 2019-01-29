@@ -1,0 +1,23 @@
+section.s-place#contacts
+  .container.contacts__container
+    .contacts
+      h5.contacts__title.title.upper Наши 
+        span.line контакты:
+      .contacts__item.address
+        .contacts__item-wrap
+          +svgsprite("place")
+        span г. Хабаровск, 
+          br 
+          |ул.Постышева, д.22А, оф.513 
+      .contacts__item
+        .contacts__item-wrap
+          +svgsprite("call")
+        .contacts__item-phone
+          a(href="tel:8 (421) 293 07 98") 8 (421) 293 07 98
+          a(href="tel:8 924 403 07 98") 8 924 403 07 98
+          button(href="#callback-form").block-btn__link.form__btn.contacts__btn.blick.popup-with-form Заказать звонок
+      .contacts__item.mail
+        .contacts__item-wrap
+          +svgsprite("mail").contacts__item-icon
+        span dla_pisem@mail.ru
+  .map#YMapsID

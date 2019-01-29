@@ -1,0 +1,19 @@
+section.s-more#more
+  .container.more__container
+    span.more__heading.heading.upper Что-нибудь еще?
+    .more__title.title.upper
+      |Наши 
+      span.line дополнительные услуги
+    .row.more__row
+      - var more =['Регистрация ИП и юр. лиц', 'Налоговое консультирование', 'Тендерное сопровождение', 'Земельные споры', 'Составление договоров', 'Сопровождение сделок']
+      -each item, i in more
+        .more__item
+          span.more__item__numb 0#{i+1}
+          span.more__item__text #{item}
+          span.more__item__link Узнать больше
+            +svgsprite("down_arrow")
+          .more__dropdown
+            p.more__dropdown__text Мы составим для Вас договор любой сложности, который учтет все детали и защитит Вас от всевозможных рисков на 100%
+            +svgsprite("down_arrow")
+            .contact-btn
+              a(href="#trouble-form").popup-with-form Оставить заявку

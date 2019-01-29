@@ -1,0 +1,41 @@
+- var obj = { "1" : { "question" : "Какова стоимость ваших услуг?", "answer" : "Cтоимость наших услуг от 30000 рублей за сопровождение одного гражданского или административного дела. Стоимость услуг по уголовным делам обсуждается индивидуально. " }, "2" : { "question" : "Возможна ли оплата вашей работы после получения взысканных с ответчика денежных средств? ", "answer" : "Да, Вы можете оплатить наши услуги после получения взысканных с ответчика денежных средств." }, "3" : { "question" : "Как часто и в каким образом я буду получать от вас отчет о проделанной работе?", "answer" : "Отчеты о проделанной работе мы можем направлять вам в любое удобное для вас время и любой форме." }, "4" : { "question" : "Почему мне выгоднее заключить с вами договор на абонентское юридическое обслуживание моего бизнеса, чем нанять юриста в штат?", "answer" : "Потому что Вам не надо заключать трудовой договор, Вам не надо нести риски и расходы больничных, отпусков и тд. По сути, вы нанимаете себе в штат юридический отдел, который, кстати говоря, не болеет и не ходит в отпуск, а также не расходует Ваши внутренние ресурсы (рабочие места, оргтехнику и т. д.). Ваша выгода очевидна." } }
+
+section.faq.s-faq#faq
+  .container
+    h2.faq__title.title.upper Отвечаем на 
+      span.line  ваши вопросы
+    ul.faq__list.js-accordion
+      -each object in obj
+        li.faq__item.js-accordionItem.js-accordionButton
+          .faq__row
+            p.faq__row-question #{object.question}
+            button.faq__row-btn
+          .faq__content.js-accordionContent
+            p.faq__content-answer
+              span Наш ответ: 
+              |#{object.answer}
+            form.faq__form.form.f-faq.ajax(data-form-name='Получить консультацию (блок ответы на вопросы)')
+              .f-faq__row
+                label.f-faq__label.form__label._input
+                  +svgsprite("man-user")
+                  input.f-faq__field.form__field(type='text', name='name', placeholder='Как к Вам обращаться?', required='required')
+                label.f-faq__label.form__label._input
+                  +svgsprite("call")
+                  input.f-faq__field.form__field.mask(type='tel', name='phone', placeholder='Введите Ваш телефон', required='required')
+                button.block-btn__link.faq__btn.blick Получить консультацию
+                a(href="#thanks2" style="display: none;").popup-with-form
+              .f-faq__agree-wrapper
+                .f-faq__agree
+                  .form__agree-checkbox
+                    img(src="/images/check.png", alt="Галочка")
+                  .form__agree-text Согласен(а) на обработку данных  
+  .faq__dots.dots
+    span
+    span
+    span
+#thanks2.thanks2.white-popup-block.mfp-hide
+      .form-title Спасибо за доверие!
+      p Мы свяжемся с вами по указанному телефону
+        span._accent  для оказания бесплатной консультации
+      svg.svgsprite.-close.mfp-close
+        use.mfp-close(xlink:href="./assets/img/sprites/svgsprites.svg#close")

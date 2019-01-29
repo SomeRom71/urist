@@ -1,0 +1,19 @@
+{
+  "name": "PD",
+  "version": "0.0.0",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "detectizr": "2.2.0",
+    "svg4everybody": "*",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "dedectizr": {
+      "main": "dist/detectizr.js"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.svgsprite {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+
+	{{#shapes}}
+    &.-{{base}} {
+    	width:({{width.inner}}/{{height.inner}})*1em;
+    }
+    {{/shapes}}
+}

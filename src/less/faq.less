@@ -1,0 +1,210 @@
+.faq{
+	padding: 88px 0 55px;
+    margin-bottom: -90px;
+    &__title{
+    	margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.1;
+    }   
+    &__list{
+    	width: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+    }
+    &__item{
+    	padding: 20px 35px 20px; 
+        border-radius: 30px;
+        box-shadow: 0px 0px 40px 0px rgba(60, 60, 240, 0.17);
+        background-color: #FFF;
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+    }
+    &__row{
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-btn{
+        	display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            font-size: 12px;
+            color: #21334D;
+            line-height: 1.5;
+            padding: 0 6px;
+            font-family: Gilroy;
+            font-size: 12px;
+            &::before{
+            	content: 'Прочесть ответ'; 
+                opacity: 0.5;
+                padding-right: 0.2em;
+                ._open &{
+                    content: 'Спасибо, я понял';
+                }
+            }  
+            &::after{
+            	content: '';
+                display: block;   
+                width: 13px;
+                height: 12px;   
+                margin-left: 8px;
+                border-top: 2px solid #81fdb2;
+                border-right: 2px solid #81fdb2;
+                transform: rotate(135deg) translateY(25%);
+                transition: transform 0.5s ease; 
+                ._open &{
+                    transform: rotate(-45deg) translateY(25%);
+                }
+            }     
+        }
+       &-question{
+       	color: #21334d;
+       }        
+    }   
+    &__content{
+    	margin-top: 10px;
+        display: none;
+        &::before{
+        	content: '';
+            display: block;
+            width: 80px;
+            height: 1px;
+            background-color: #61fd9f;
+            margin-bottom: 15px;
+        }   
+        &-answer{
+        	margin-bottom: 22px;
+            font-weight: 700; 
+            color: #21334d;  
+            span{
+                color: #61fd9f;
+            }
+        }        
+    }
+    &__btn{
+    	font-size: 16px;
+    	padding: 13px 20px;
+    	box-shadow: none;
+        font-family: Gilroy;
+    }
+    &__dots{
+        span{
+            &:nth-child(3n+1){
+                background-color: #9d9df7;
+            }
+            &:nth-child(3n+2){
+                background-color: #7676f4;
+            }
+            &:nth-child(3n+3){
+                background-color: @text;
+            }
+        }
+    }      
+} 
+
+.f-faq{
+	&__row{
+    	display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    &__label{
+        padding: 0px 11px;
+        min-height: 42px; 
+        line-height: 42px;
+        border-radius: 30px;
+        border: 1px solid @text;
+        svg{
+    		fill: #c4c4fa;
+    		margin-right: 5px;
+    		vertical-align: text-top;
+    	}
+    }  
+    &__btn{
+    	min-width: 0;
+        width: 244px;
+        padding: 8px 16px;
+        min-height: 42px;
+        box-shadow: none;
+    }  
+    &__agree{ 
+    	display: inherit;
+        margin-left: auto;
+        font-size: 11px;
+        opacity: 0.5;
+        &-wrapper{
+        	display: flex;
+            padding: 15px 26px 0;
+        }
+        &-text{
+        	margin-left: 5px;
+        }
+    }
+    &__field{
+    	font-size: 16px;
+    	color: #889FAE;
+        font-family: Gilroy;
+    }
+
+}
+
+@media (max-width: 1200px){
+}
+ 
+@media (max-width: 979px){
+    .faq{
+        &__btn{
+            font-size: 15px;
+        }
+    }
+    .f-faq__field{
+        font-size: 15px;
+    }    
+}
+ 
+@media (max-width: 767px){
+    .faq{
+        &__row{
+            flex-direction: column-reverse;
+            &-question{
+                text-align: center;
+            }
+        }
+        &__content{
+            &::before{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            &-answer{
+                text-align: center;
+                span{
+                    display: block;
+                }
+            }
+        }
+        &__btn{
+            padding: 13px 30px;
+        }
+        &__title{
+            font-size: 25px;
+        }
+    }
+    .f-faq{
+        &__row{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__label{
+            margin-bottom: 10px;
+        }
+        &__agree{
+            margin: 0 auto;
+        }
+    }
+}
+ 
+@media (max-width: 480px){
+    
+}

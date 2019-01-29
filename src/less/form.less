@@ -1,0 +1,163 @@
+#callback-form{
+  width: 570px;
+  background: url(/images/big-phone.svg) no-repeat;
+  background-size: 505px;
+  background-position: center -25px;
+  button{
+    display: block;
+    margin: 0 auto;
+  }
+  .form-title{
+    color: #21334d;
+    margin-bottom: 35px;
+    .sm{
+      font-size: 22px;
+    }
+  }
+  .form__label{
+    margin-bottom: 20px;
+  }
+  .mfp-close{
+    opacity: 0.7;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .-close{
+    fill: #61fd9f;
+  }
+}
+
+.trouble-wrap, #callback-form, #thanks, #privacy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 45px;
+  .form-title{
+    font-weight: 900;
+    font-size: 30px;
+    .sm{
+      display: block;
+    }
+  }
+  .mfp-close{
+    margin: 10px;
+  }
+}
+
+#trouble-form{
+  width: 455px;
+  background-color: #3c3cf0;
+  border-radius: 20px;
+  .trouble-wrap{
+    background-image: url(/images/fire.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+  .form-title{
+    color: #FFF;
+    letter-spacing: 0.01em;
+    padding: 0 35px;
+    margin-bottom: 25px;
+    .sm{
+      font-size: 18px;
+      letter-spacing: 0.025em;
+    }
+  }
+  label{
+    border-color: #61fd9f;
+    margin-bottom: 10px;
+    color: fff;
+  }
+  .stability__input{
+    color: #FFF;
+  }
+  .mfp-close{
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .-close{
+    fill: #fff;
+  }
+  .block-btn{
+    margin-top: 10px;
+    &__link{
+      color: #3c3cf0;
+      background-color: #61fd9f;
+      &:hover{
+        background-color: #FFF;
+      }
+    }
+  }
+  .agree{
+    color: #FFF;
+    opacity: 0.4;
+  }
+}
+
+#thanks, #thanks2{
+  color: #21334D;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  width: 465px;
+  padding: 102px 55px 85px;
+  background-image: url(/images/good.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 10px;
+  .form-title{
+    font-size: 44px;
+  }
+  &._accent{
+    color: #61FD9F;
+  }
+  .mfp-close{
+    opacity: 0.7;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .-close{
+    fill: #61fd9f;
+  }
+  p{
+    font-size: 22px;
+  }
+}
+
+#thanks2{
+  ._accent{
+    color: #3C3CF0;
+  }
+  .mfp-close{
+    margin: 10px;
+  }
+}
+
+#privacy{
+  width: 570px;
+  padding: 35px 0 5px;
+  .form-title{
+    text-transform: uppercase;
+    color: #21334D;
+  }
+  p{
+    padding: 25px;
+    text-align: left;
+    font-size: 12px;
+  }
+  .mfp-close{
+    .-close{
+      fill: #654AEA;
+      opacity: 0.4;
+    }
+    &:hover{
+      .-close{
+        opacity: 1;
+      }
+    }
+  }
+}
